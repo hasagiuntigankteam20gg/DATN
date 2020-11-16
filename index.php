@@ -19,15 +19,44 @@
 			<center> WEATHER AND AIR MONITORING SYSTEM</center>  
         </div>
     
-		<div class="header">
-					                            
+		<div class="header">		                            
             <a href="#" class="btn btn-info" role="button"> HOME</a>
             <a href="../HTQT/node1" class="btn btn-info" role="button"> TRẠM 1</a>
             <a href=".." class="btn btn-info" role="button"> TRẠM 2</a>   
 		</div>
 		<div id="wrapper">
             <div id="left">
-				                 
+			<?php
+				// if (isset($_GET['submit'])) {
+					
+				// }
+				if (isset($_POST['submit'])) {
+					$servername = "localhost"; //Servername luôn luôn là localhost
+					$username = "root"; //m?c d?nh username là root
+					$password = ""; //password b? tr?ng
+					$dbname = "gp"; //tên database chúng ta v?a t?o khi nãy
+					$link = new mysqli($servername,$username,$password, $dbname) or die ("no connect!!!!");
+					mysqli_query($link,'SET NAMES UTF8');
+					date_default_timezone_set('Asia/Ho_Chi_Minh');
+					
+					$query = "SELECT * FROM data1 ORDER BY id DESC LIMIT 1";
+					$result = mysqli_query($link,$query) or die (mysqli_error($link));
+					if (mysqli_num_rows($result) > 0) {
+						while ($row = mysqli_fetch_array($result))// tạo bang sql tren database
+							{		
+								// lay data tu DB
+							}
+					}
+						
+					echo  "welcome {$_POST["maxHumi"]}";
+					// // lay het chi so
+					// $minHumi = 
+
+
+					// // so sanh
+
+				}
+				?>    
 			</div>
 			
 			<div id="wrap_main">

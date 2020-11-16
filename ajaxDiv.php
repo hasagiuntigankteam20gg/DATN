@@ -1,6 +1,6 @@
 <?php
 
-     $servername = "localhost"; //Servername luôn luôn là localhost
+    $servername = "localhost"; //Servername luôn luôn là localhost
 	$username = "root"; //m?c d?nh username là root
 	$password = ""; //password b? tr?ng
 	$dbname = "gp"; //tên database chúng ta v?a t?o khi nãy
@@ -24,7 +24,7 @@
                 <td><h4>Time</h4></h3></td></tr>";
 		while ($row = mysqli_fetch_array($result))// tạo bang sql tren database
 		{
-            echo "<center><tr><td>".$row['id']."</td>
+            echo "<center><tr name=".$row['id']."><td>".$row['id']."</td>
                     <td>".$row['spw']."</td>
                     <td>".$row['drw']."</td>
                     <td>".$row['pm25']."</td>

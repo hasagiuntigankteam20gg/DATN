@@ -32,7 +32,7 @@ session_start();
             <a href=".." class="btn btn-info" role="button"> TRẠM 2</a>   
         </div>
     
-    <form>
+    <form action="../index.php" method ="post">
 		<table align='center' border=1 cellspacing=2 cellpadding='8' style="width: 80%;">
 			<tr id="trForm">
 				<td>
@@ -81,7 +81,7 @@ session_start();
 			<tr id="trForm">
 				<td colspan="2"><p id="status">Nhập giá trị để cập nhật</p></td>
 				<td>
-					<input type="button" value="Cập nhật" id="updateButton">
+					<input type="submit" name="submit" value="Cập nhật" id="updateButton">
 					
 				</td>
 			</tr>
