@@ -36,48 +36,54 @@ session_start();
 		<table align='center' border=1 cellspacing=2 cellpadding='8' style="width: 80%;">
 			<tr id="trForm">
 				<td>
-					Danger Temperature: <input type='text' name='maxTemp' id='MaxTemp'>												
+					Danger PPM2.5: <input type='number' step ='any' name='maxPPM25' id='MaxPPM25'>												
 				</td>
 				<td>
-					Danger PPM10: <input type='text' name='maxPPM10' id='MaxPPM10'>					
+					Danger SO<sub>2</sub>: <input type='number' step='any' name='maxSO2' id='MaxSO2'>					
 				</td>
                 <td>
-					Danger SO<sub>2</sub>: <input type='text' name='maxPPM10' id='MaxPPM10'>					
+					Danger CO: <input type='text' name='maxCO' id='MaxCO'>					
 				</td>
 				</tr>
 			<tr id="trForm">
 				<td>
-					Warning Temperature: <input type='text' name='minTemp' id='MinTemp'>
+					Warning PPM2.5: <input type='text' name='minPPM25' id='MinPPM25'>
 				</td>
 				<td>
-					Warning PPM10: <input type='text' name='minHumi' id='MinHumi'>
+					Warning SO<sub>2</sub>: <input type='text' name='minSO2' id='MinSO2'>
 				</td>
 				<td>
-					Warning SO<sub>2</sub>: <input type='text' name='minPPM' id='MinPPM'>
+					Warning CO: <input type='text' name='minCO' id='MinCO'>
 				</td>
 				</tr>
             <tr id="trForm">
 				<td>
-					Maximum Humidity: <input type='text' name='maxHumi' id='MaxHumi'>
+					Danger PPM10: <input type='text' name='maxPPM10' id='MaxPPM10'>
 				</td>
 				<td>
-					Danger PPM25: <input type='text' name='minHumi' id='MinHumi'>
+					Danger NO<sub>2</sub>: <input type='text' name='maxNO2' id='MinNO2'>
 				</td>
 				<td>
-					Danger NO<sub>2</sub>: <input type='text' name='minPPM' id='MinPPM'>
+					<!-- Danger NO<sub>2</sub>: <input type='text' name='minPPM' id='MinPPM'> -->
 				</td>
 				</tr> 
                 <tr id="trForm">
 				<td>
-					Minium Humidity: <input type='text' name='minTemp' id='MinTemp'>
+					Warning PPM10: <input type='text' name='minPPM10' id='MinPPM10'>
 				</td>
 				<td>
-					Warning PPM25: <input type='text' name='minHumi' id='MinHumi'>
+					Warning NO<sub>2</sub>: <input type='text' name='minNO2' id='MinNO2'>
 				</td>
 				<td>
-					Warning NO<sub>2</sub>: <input type='text' name='minPPM' id='MinPPM'>
+					<!-- Warning NO<sub>2</sub>: <input type='text' name='minPPM' id='MinPPM'> -->
 				</td>
-				</tr>   
+				</tr>
+			<tr id="trForm">
+				<td colspan="2"><p id="status">Thời gian cập nhật</p></td>
+				<td>
+					<input type='text' name='setting' id='setting'>
+					
+				</td>   
 			<tr id="trForm">
 				<td colspan="2"><p id="status">Nhập giá trị để cập nhật</p></td>
 				<td>

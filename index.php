@@ -9,7 +9,7 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-
+		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     </head>
     <body>
     <img src="Logo_BKDN.png" width="500" height="500" id="logoHeaderBKDN"/>
@@ -44,14 +44,45 @@
 					if (mysqli_num_rows($result) > 0) {
 						while ($row = mysqli_fetch_array($result))// tạo bang sql tren database
 							{		
+								echo " 										
+									".$row['pm25'].";
+									".$row['pm10'].";
+									".$row['so2'].";
+									".$row['no2'].";
+									".$row['co'].";									
+								";
 								// lay data tu DB
+								$ssso2 = $row['so2'];
+
 							}
 					}
 						
-					echo  "welcome {$_POST["maxHumi"]}";
+					echo  "{$_POST["maxPPM25"]}";
+					echo  "{$_POST["minPPM25"]}";
+					echo  "{$_POST["maxPPM10"]}";
+					echo  "{$_POST["minPPM10"]}";
+					echo  "{$_POST["maxSO2"]}";
+					echo  "{$_POST["minSO2"]}";
+					echo  "{$_POST["maxNO2"]}";
+					echo  "{$_POST["minNO2"]}";
+					echo  "{$_POST["maxCO"]}";
+					echo  "{$_POST["minCO"]}";
 					// // lay het chi so
-					// $minHumi = 
-
+					$maxSO2 = $_POST["maxSO2"];
+					// if(is_numeric(str_replace('.','',$maxPPM25))){
+					// 	$maxPPM25 = sprintf('%0.4f',$maxPPM25);
+					// 	echo $maxPPM25;
+					// }
+					
+					echo $ssso2;
+					// if(is_numeric(str_replace('.','',$pm25))){
+					// 	$pm25 = sprintf('%0.4f',$pm25);
+					// 	echo $pm25;
+					// }
+					//  
+					if ($ssso2 < $maxSO2) {
+						echo "<p style='color:blue'>PPM2.5=$ssso2</p>";
+					}
 
 					// // so sanh
 
