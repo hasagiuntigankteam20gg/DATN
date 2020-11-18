@@ -36,48 +36,53 @@ session_start();
 		<table align='center' border=1 cellspacing=2 cellpadding='8' style="width: 80%;">
 			<tr id="trForm">
 				<td>
-					Danger PPM2.5: <input type='number' step ='any' name='maxPPM25' id='MaxPPM25'>												
+					Danger PPM2.5  : <input type='number' step ='any' name='maxPPM25' id='MaxPPM25'>
+					Warning PPM2.5: <input type='number' step='any' name='minPPM25' id='MinPPM25'>												
 				</td>
 				<td>
-					Danger SO<sub>2</sub>: <input type='number' step='any' name='maxSO2' id='MaxSO2'>					
+					Danger SO<sub>2</sub>: <input type='number' step='any' name='maxSO2' id='MaxSO2'>
+					Warning SO<sub>2</sub>: <input type='number' step='any' name='minSO2' id='MinSO2'>					
 				</td>
                 <td>
-					Danger CO: <input type='text' name='maxCO' id='MaxCO'>					
+					Danger CO: <input type='number' name='maxCO' step='any' id='MaxCO'>
+					Warning CO: <input type='number' step='any' name='minCO' id='MinCO'>					
 				</td>
 				</tr>
-			<tr id="trForm">
+			<!-- <tr id="trForm">
 				<td>
-					Warning PPM2.5: <input type='text' name='minPPM25' id='MinPPM25'>
+					Warning PPM2.5: <input type='number' step='any' name='minPPM25' id='MinPPM25'>
 				</td>
 				<td>
-					Warning SO<sub>2</sub>: <input type='text' name='minSO2' id='MinSO2'>
+					Warning SO<sub>2</sub>: <input type='number' step='any' name='minSO2' id='MinSO2'>
 				</td>
 				<td>
-					Warning CO: <input type='text' name='minCO' id='MinCO'>
+					Warning CO: <input type='number' step='any' name='minCO' id='MinCO'>
 				</td>
-				</tr>
+				</tr> -->
             <tr id="trForm">
 				<td>
-					Danger PPM10: <input type='text' name='maxPPM10' id='MaxPPM10'>
+					Danger PPM10: <input type='number' step='any' name='maxPPM10' id='MaxPPM10'>
+					Warning PPM10: <input type='number' step='any' name='minPPM10' id='MinPPM10'>
 				</td>
 				<td>
-					Danger NO<sub>2</sub>: <input type='text' name='maxNO2' id='MinNO2'>
+					Danger NO<sub>2</sub>: <input type='number' step='any' name='maxNO2' id='MinNO2'>
+					Warning NO<sub>2</sub>: <input type='number' step='any' name='minNO2' id='MinNO2'>
 				</td>
 				<td>
 					<!-- Danger NO<sub>2</sub>: <input type='text' name='minPPM' id='MinPPM'> -->
 				</td>
 				</tr> 
-                <tr id="trForm">
+                <!-- <tr id="trForm">
 				<td>
-					Warning PPM10: <input type='text' name='minPPM10' id='MinPPM10'>
+					Warning PPM10: <input type='number' step='any' name='minPPM10' id='MinPPM10'>
 				</td>
 				<td>
-					Warning NO<sub>2</sub>: <input type='text' name='minNO2' id='MinNO2'>
+					Warning NO<sub>2</sub>: <input type='number' step='any' name='minNO2' id='MinNO2'>
 				</td>
 				<td>
-					<!-- Warning NO<sub>2</sub>: <input type='text' name='minPPM' id='MinPPM'> -->
+					Warning NO<sub>2</sub>: <input type='text' name='minPPM' id='MinPPM'>
 				</td>
-				</tr>
+				</tr> -->
 			<tr id="trForm">
 				<td colspan="2"><p id="status">Thời gian cập nhật</p></td>
 				<td>

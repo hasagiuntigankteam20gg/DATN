@@ -27,7 +27,7 @@
     margin-right: 40px;
     }    
 
-#left{
+.left-wrapper{
         width: 40%;
         height: 200px;
         
@@ -37,16 +37,16 @@
         margin: auto;
         height: 200px;
     }
-#wrap_main{
+.right-wrapper{
         width:60%;
         float: right;
         height: 200px;
         margin: auto;
-        font-size: 10px;
+        font-size: 12px;
        }
 tr{
         text-align: center;
-        font-size: 10px;
+        font-size: 12px;
     }
 #map{
     width: 1000px;
