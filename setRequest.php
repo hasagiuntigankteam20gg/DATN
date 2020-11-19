@@ -1,8 +1,8 @@
 <?php
-    $servername = "mysql06.dotvndns.vn";
-	$username = "vvtsm841_junkin";
-	$password = "loipro123"; 
-	$dbname = "vvtsm841_db"; 
+    $servername = "localhost";
+	$username = "root";
+	$password = ""; 
+	$dbname = "gp"; 
 	$link = new mysqli($servername,$username,$password, $dbname) or die ("no connect!!!!");
 	mysqli_query($link,'SET NAMES UTF8');
 	date_default_timezone_set('Asia/Ho_Chi_Minh');  

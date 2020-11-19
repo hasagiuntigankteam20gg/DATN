@@ -32,7 +32,7 @@ session_start();
             <a href=".." class="btn btn-info" role="button"> TRẠM 2</a>   
         </div>
     
-    <form action="../index.php" method ="post">
+    <form action="../comparasion.php" method ="post">
 		<table align='center' border=1 cellspacing=2 cellpadding='8' style="width: 80%;">
 			<tr id="trForm">
 				<td>
@@ -84,15 +84,16 @@ session_start();
 				</td>
 				</tr> -->
 			<tr id="trForm">
-				<td colspan="2"><p id="status">Thời gian cập nhật</p></td>
-				<td>
-					<input type='text' name='setting' id='setting'>
-					
+				<td>Thời gian cập nhật</p></td>
+				<td colspan="2">
+					<input type="radio" name="timer" value="5" checked="checked"> 5 minutes&nbsp;&nbsp;&nbsp;
+					<input type="radio" name="timer" value="10" checked="checked"> 10 minutes&nbsp;&nbsp;&nbsp;
+					<input type="radio" name="timer" value="30" checked="checked"> 30 minutes&nbsp;&nbsp;&nbsp;
 				</td>   
 			<tr id="trForm">
 				<td colspan="2"><p id="status">Nhập giá trị để cập nhật</p></td>
 				<td>
-					<input type="submit" name="submit" value="Cập nhật" id="updateButton">
+					<input type="submit" name="submit" onclick="ajaxSetTDS()" value="submit" id="updateButton">
 					
 				</td>
 			</tr>
