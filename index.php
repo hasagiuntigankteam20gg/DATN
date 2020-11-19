@@ -23,8 +23,8 @@
             <a href="../HTQT/node1" class="btn btn-info" role="button"> TRẠM 1</a>
             <a href=".." class="btn btn-info" role="button"> TRẠM 2</a>   
 		</div>
-		<div class="wrapper">
-            <div class="left-wrapper">
+		<div id="wrapper">
+            <div id="left">
 			<?php
 				// if (isset($_GET['submit'])) {
 					
@@ -147,7 +147,7 @@
 				?>    
 			</div>
 			
-			<div class="right-wrapper">
+			<div id="wrap_main">
 				<script src="ajaxDiv.js"></script>	
 				<script type="text/javascript">ajaxFunction();</script>
 			</div>			
@@ -187,18 +187,18 @@
     							label[i] = "1";
     							i++;
     													
-    							status[i] = "1";
-    							myLatlng[i] = new google.maps.LatLng("16.065195", "108.161532");
-    							color[i] = "yellow";
-    							label[i] = "3";
-    							i++;
+    							// status[i] = "1";
+    							// myLatlng[i] = new google.maps.LatLng("16.065195", "108.161532");
+    							// color[i] = "yellow";
+    							// label[i] = "3";
+    							// i++;
     													
-    							status[i] = "2";
-    							myLatlng[i] = new google.maps.LatLng("16.065814", "108.160245");
-    							color[i] = "red";
-    							label[i] = "4";
-    							i++;
-    									    for (i = 0; i < 4; i++){
+    							// status[i] = "2";
+    							// myLatlng[i] = new google.maps.LatLng("16.065814", "108.160245");
+    							// color[i] = "red";
+    							// label[i] = "4";
+    							// i++;
+    									    for (i = 0; i < 2; i++){
 				    marker[i] = new google.maps.Marker({
 	                    position: myLatlng[i],
 	                    label: label[i],
@@ -210,7 +210,7 @@
 	                    title: 'Node '+ i.toString()
                 	});
 				}
-				for (i = 0; i < 4; i++){
+				for (i = 0; i < 2; i++){
 					if (i==1) {
 						infowindow = new google.maps.InfoWindow({
 					    content: '',
@@ -231,6 +231,5 @@
 			<div id="project1"><b>&copy; Nguyen Ha Phuc Bao - 16DTCLC1 - Graduation Project</b></div>			
 			</center>
 		</div>			
-        <script src="" async defer></script>
     </body>
 </html>

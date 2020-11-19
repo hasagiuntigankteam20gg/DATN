@@ -26,21 +26,22 @@
     float:right;
     margin-right: 40px;
     }    
-
-.left-wrapper{
-        width: 40%;
-        height: 200px;
-        
-    }
 #wrapper{
-        width: 100%;
+        width: 1200px;
         margin: auto;
-        height: 200px;
+        height: 300px;
     }
-.right-wrapper{
-        width:60%;
+#left{
+        width: 400px;
+        height: 300px;
+        float: left;
+        margin: auto;
+    }
+
+#wrap-main{
+        width:800px;
         float: right;
-        height: 200px;
+        height: 300px;
         margin: auto;
         font-size: 12px;
        }

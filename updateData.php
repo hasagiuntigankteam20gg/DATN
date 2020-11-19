@@ -16,7 +16,27 @@
 	$co = $_GET['co'];
 	$sql = "INSERT INTO data1 VALUES (NULL,'$spw','$drw','$pm10','$pm25','$so2','$no2','$co','$time')";
 	$result = mysqli_query($link, $sql) or die ("no connect: $sql ".mysqli_error($link));
-	$query = "SELECT * FROM data1";
+	$query = "SELECT * FROM setting";
 	$result = mysqli_query($link,$query) or die (mysqli_error($link));
+	if (mysqli_num_rows($result) > 0)
+	{
+		while ($row = mysqli_fetch_array($result))
+		{
+			echo "*".$row['timer'].";
+					".$row['maxPPM25'].";
+					".$row['minPPM25'].";
+					".$row['maxPPM10'].";
+					".$row['minPPM10'].";
+					".$row['maxSO2'].";
+					".$row['minSO2'].";
+					".$row['maxNO2'].";
+					".$row['minNO2'].";
+					".$row['maxCO'].";
+					".$row['minCO'].
+					
+					
+					"#";
+		}
+	}
 	
 ?>
