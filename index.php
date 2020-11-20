@@ -11,70 +11,7 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     </head>
-    <body>
-	<script type="text/javascript">ajaxFunction();
-		function ajaxSetTDS(){
-		   var ajaxRequest;  // Khai bao mot bien
-		   try{		   
-		      // Voi cac trinh duyet hien dai: Opera 8.0+, Firefox, Safari
-		      ajaxRequest = new XMLHttpRequest();
-		   }catch (e){
-		      try{
-		         ajaxRequest = new ActiveXObject("Msxml2.XMLHTTP");
-		      }catch (e) {
-		         
-		         try{
-		            ajaxRequest = new ActiveXObject("Microsoft.XMLHTTP");
-		         }catch (e){
-		         
-		            // Thong bao khi xay ra loi
-		            alert("Co loi xay ra voi trinh duyet cua ban!");
-		            return false;
-		         }
-		      }
-		   }
-		   ajaxRequest.onreadystatechange = function(){
-		   
-		      if(ajaxRequest.readyState == 4){
-		         var ajaxDisplay = document.getElementById('ajaxKQ');
-		         ajaxDisplay.innerHTML = ajaxRequest.responseText;
-		      }
-		   }	   
-		   var timerD = document.getElementsByName('timer');
-		   var timeReturn = 30;
-		   for(var i = 0, length = timerD.length; i < length; i++){
-		       if(timerD[i].checked){
-		           timerReturn = timerD[i].value;
-		       }
-		   }
-		//    var clearD = document.getElementsByName('clear');
-		//    var clearReturn = 3;
-		//    for(var i = 0, length = clearD.length; i < length; i++){
-		//        if(clearD[i].checked){
-		//            clearReturn = clearD[i].value;
-		//        }
-		//    }
-		   
-		//    var backupD = document.getElementsByName('backup');
-		//    var backupReturn = 0;
-		//    for(var i = 0, length = backupD.length; i < length; i++){
-		//        if(backupD[i].checked){
-		//           backupReturn = backupD[i].value;
-		//        }
-		//    }
-		   
-		//    var phoneD = document.getElementsByName('phone');
-		//    var phoneReturn = 0976742314;
-		//    for(var i = 0, length = phoneD.length; i < length; i++){
-		//        if(phoneD[i].checked){
-		//           phoneReturn = phoneD[i].value;
-		//        }
-		//    }
-		   var queryString = "setRequest.php?timer=" + timerReturn + "&maxPPM25=" + maxPPM25;// ECHO DOC DATA TỪ WEB XUỐNG-> LOAD FILE setrequest.php
-		   ajaxRequest.open("GET", queryString , true);
-		   ajaxRequest.send(null); 
-		}
-	</script>
+    <body>	
     <img src="Logo_BKDN.png" width="500" height="500" id="logoHeaderBKDN"/>
     <img src="Logo_DTVT.png" width="500" height="500" id="logoHeaderDTVT"/>
         <div id="top">  
@@ -92,9 +29,9 @@
 			</div>
 			
 			<div id="wrap_main">
-				<script src="ajaxDiv.js"></script>	
-				<script type="text/javascript">ajaxFunction();</script>
+					
 			</div>			
+		
 			
         </div> 
         <!-- <script src="ajaxDiv.js"></script> -->

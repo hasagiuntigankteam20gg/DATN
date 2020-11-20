@@ -33,8 +33,6 @@
 					".$row['minNO2'].";
 					".$row['maxCO'].";
 					".$row['minCO'].
-					
-					
 					"#";
 		}
 	}

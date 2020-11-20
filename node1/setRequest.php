@@ -19,5 +19,5 @@
     $minCO = $_GET['minCO'];
 	$sql = "UPDATE setting SET timer=$timer,maxPPM25=$maxPPM25,minPPM25=$minPPM25,maxPPM10=$maxPPM10,minPPM10=$minPPM10,maxSO2=$maxSO2,minSO2=$minSO2,maxNO2=$maxNO2,minNO2=$minNO2,maxCO=$maxCO,minCO=$minCO"; 
 	$result = mysqli_query($link, $sql) or die ("no connect: $sql ".mysqli_error($link));
-	echo "Dữ liệu điều khiển = timer = ".$timer." -- maxPPM25 = ".$maxPPM25." -- minPPM25 = ".$minPPM25." -- maxPPM10 = ".$maxPPM10." -- minPPM10 = ".$minPPM10." -- maxSO2 = ".$maxSO2." -- minSO2 = ".$minSO2." -- maxNO2 = ".$maxNO2." -- minNO2 = ".$minNO2." -- maxCO = ".$maxCO." -- minCO = ".$minCO." đã được cập nhập.";
+	echo "Dữ liệu điều khiển = timer = ".$timer." -- maxPPM25 = ".$maxPPM25." -- minPPM25 = ".$minPPM25." -- maxPPM10 = ".$maxPPM10." -- minPPM10 = ".$minPPM10." -- maxSO2 = ".$maxSO2." -- minSO2 = ".$minSO2." -- maxNO2 = ".$maxNO2." -- minNO2 = ".$minNO2." -- maxCO = ".$maxCO." -- minCO = ".$minCO." đã được cập nhật.";
 ?>

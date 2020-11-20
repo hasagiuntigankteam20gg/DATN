@@ -26,9 +26,22 @@
     float:right;
     margin-right: 40px;
     }    
-
 #wrapper{
         width: 1000px;
         margin: auto;
-        height: 200px;
+        height: 700px;
     }
+#wrap_main{
+        width:1000px;
+        height: 600px;
+        margin: auto;
+        font-size: 12px;
+        
+       }
+.tr,td{
+        text-align: center;
+        font-size: 12px;
+    }
+.myDiv{
+    margin-top: 50px;
+}
