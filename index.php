@@ -25,7 +25,7 @@
 		</div>
 		<div id="wrapper">
             <div id="left">
-			 
+			<?php include 'weather.php';?>
 			</div>
 			
 			<div id="wrap_main">

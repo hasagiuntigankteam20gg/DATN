@@ -35,8 +35,8 @@
                     <div class="col-md-5">
                         <div>Pressure: <?php echo $current_obj->main->pressure."hPa" ?></div>
                         <div>Humidity: <?php echo $current_obj->main->humidity."%" ?></div>
-                        <div>Max Temperature: <?php echo $current_obj->main->max_temp." &#8451;" ?></div>
-                        <div>Min Temperature: <?php echo $current_obj->main->min_temp." &#8451;" ?></div>                                             
+                        <div>Max Temperature: <?php echo $current_obj->main->temp_max." &#8451;" ?></div>
+                        <div>Min Temperature: <?php echo $current_obj->main->temp_min." &#8451;" ?></div>                                             
                     </div>
                 </div>
             </div>

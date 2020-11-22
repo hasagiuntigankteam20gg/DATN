@@ -1,10 +1,10 @@
 function ajaxFunction(){
-    var ajaxRequest;  // Khai bao mot bien
-    try{		   
+   var ajaxRequest;  // Khai bao mot bien
+   try{		   
       // Voi cac trinh duyet hien dai: Opera 8.0+, Firefox, Safari
       ajaxRequest = new XMLHttpRequest();
-    }catch (e){
-      try{
+   }catch (e){
+   try{
          ajaxRequest = new ActiveXObject("Msxml2.XMLHTTP");
       }catch (e) {
          
