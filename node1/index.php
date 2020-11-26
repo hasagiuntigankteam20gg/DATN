@@ -11,6 +11,9 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script src="https://code.highcharts.com/stock/highstock.js"></script>
+	<script src="https://code.highcharts.com/stock/modules/exporting.js"></script>
+	<script src="https://code.highcharts.com/stock/modules/export-data.js"></script>
 	<style>
 		table {
 			font-family: arial, sans-serif;
@@ -102,6 +105,30 @@
 			<script type="text/javascript">
 				ajaxFunction();
 			</script>
+		</div>
+	</div>
+	<div class="dustChart">
+		<div class="row">
+			<div class="col-md-6">
+				<div id="ppm25_chart" style="width: 500px; height: 400px; margin-left:100px"></div>
+				<?php include "./ppm25Chart.php"; ?>
+			</div>
+			<div class="col-md-6">
+				<div id="ppm10_chart" style="width: 500px; height: 400px; margin-right:50px"></div>
+				<?php include "./ppm10Chart.php"; ?>
+			</div>
+		</div>
+	</div>
+	<div class="airChart">
+	<div class="row">
+			<div class="col-md-6">
+				<div id="co_chart" style="width: 500px; height: 400px; margin-left:100px"></div>
+				<?php include "./coChart.php"; ?>
+			</div>
+			<div class="col-md-6">
+				<div id="so2_chart" style="width: 500px; height: 400px; margin-right:50px"></div>
+				<?php include "./so2Chart.php"; ?>
+			</div>
 		</div>
 	</div>
 	<div class="myDiv">
