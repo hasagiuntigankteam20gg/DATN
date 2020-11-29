@@ -22,20 +22,20 @@
 	useUTC: false
 	}
 	});
-	var chart;
+	var COChart;
 	function requestData() {
         $.ajax({
             url: 'getco.php',
             success: function(point) {
-                var series = chart.series[0];
+                var series = COChart.series[0];
                 var x = (new Date()).getTime();
-                chart.series[0].addPoint([x,point[1]], true, true);
+                COChart.series[0].addPoint([x,point[1]], true, true);
                 setTimeout(requestData, 2000);    
             },
             cache: false
         });
     }
-	chart = Highcharts.stockChart('co_chart', {
+	COChart = Highcharts.stockChart('co_chart', {
 	    chart: {
 	        events: {
 	            load: requestData

@@ -22,20 +22,20 @@
 	useUTC: false
 	}
 	});
-	var chart;
+	var ppm25Chart;
 	function requestData() {
         $.ajax({
             url: 'get.php',
             success: function(point) {
-                var series = chart.series[0];
+                var series = ppm25Chart.series[0];
                 var x = (new Date()).getTime();
-                chart.series[0].addPoint([x,point[1]], true, true);
+                ppm25Chart.series[0].addPoint([x,point[1]], true, true);
                 setTimeout(requestData, 2000);    
             },
             cache: false
         });
     }
-	chart = Highcharts.stockChart('ppm25_chart', {
+	ppm25Chart = Highcharts.stockChart('ppm25_chart', {
 	    chart: {
 	        events: {
 	            load: requestData

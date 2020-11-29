@@ -22,20 +22,20 @@
 	useUTC: false
 	}
 	});
-	var chart;
+	var ppm10Chart;
 	function requestData() {
         $.ajax({
             url: 'getppm10.php',
             success: function(point) {
-                var series = chart.series[0];
+                var series = ppm10Chart.series[0];
                 var x = (new Date()).getTime();
-                chart.series[0].addPoint([x,point[1]], true, true);
-                setTimeout(requestData, 2000);    
+                ppm10Chart.series[0].addPoint([x,point[1]], true, true);
+                setInterval(requestData, 2000);    
             },
             cache: false
         });
     }
-	chart = Highcharts.stockChart('ppm10_chart', {
+	ppm10Chart = Highcharts.stockChart('ppm10_chart', {
 	    chart: {
 	        events: {
 	            load: requestData
@@ -82,5 +82,7 @@
 	        }())
 	    }]
 	});
+	
+
 	//setTimeout("akt()",500);
 </script>

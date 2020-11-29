@@ -115,7 +115,7 @@
 			</div>
 			<div class="col-md-6">
 				<div id="ppm10_chart" style="width: 500px; height: 400px; margin-right:50px"></div>
-				<?php include "./ppm10Chart.php"; ?>
+					<?php include "./ppm10Chart.php"; ?>
 			</div>
 		</div>
 	</div>

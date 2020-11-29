@@ -13,11 +13,14 @@ $y = rand(0, 100);*/
 	$result = mysqli_query($link,$query) or die (mysqli_error($link));
 	while ($row = mysqli_fetch_array($result)){	
 		if ($row['id'] != -1) {
-		    $y= (double)$row['so2'];
+			$y= (double)$row['so2'];
+			$z = (double)$row['pm25'];
+			$a = (double)$row['pm10'];
+			$b = (double)$row['co'];
 		}
 	}
     // Create a PHP array and echo it as JSON
-    $ret = array($x, $y);
+    $ret = array($x, $y, $z, $a, $b);
     //echo $ret;
     echo json_encode($ret);
 ?>
