@@ -22,20 +22,20 @@
 	useUTC: false
 	}
 	});
-	var ppm10Chart;
+	var NO2Chart;
 	function requestData() {
         $.ajax({
-            url: 'getppm10.php',
+            url: 'getno2.php',
             success: function(point) {
-                var series = ppm10Chart.series[0];
+                var series = NO2Chart.series[0];
                 var x = (new Date()).getTime();
-                ppm10Chart.series[0].addPoint([x,point[1]], true, true);
+                NO2Chart.series[0].addPoint([x,point[1]], true, true);
                 setInterval(requestData, 2000);    
             },
             cache: false
         });
     }
-	ppm10Chart = Highcharts.stockChart('ppm10_chart', {
+	NO2Chart = Highcharts.stockChart('no2_chart', {
 	    chart: {
 	        events: {
 	            load: requestData
@@ -59,7 +59,7 @@
 	    },
 
 	    title: {
-	        text: 'Dust PPM10'
+	        text: 'NO2'
 	    },
 	    exporting: {
 	        enabled: false

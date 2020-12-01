@@ -29,22 +29,12 @@
 #wrapper{
         width: 1200px;
         margin: auto;
-        height: 300px;
-    }
-#left{
-        width: 400px;
-        height: 300px;
-        float: left;
-        margin: auto;
+        height: 180px;
+        float: center;
     }
 
-#wrap-main{
-        width:800px;
-        float: right;
-        height: 300px;
-        margin: auto;
-        font-size: 12px;
-       }
+
+
 tr{
         text-align: center;
         font-size: 12px;

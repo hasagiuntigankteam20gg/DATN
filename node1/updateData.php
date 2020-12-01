@@ -6,15 +6,17 @@
 	$link = new mysqli($servername,$username,$password, $dbname) or die ("no connect!!!!");
 	mysqli_query($link,'SET NAMES UTF8');
 	date_default_timezone_set('Asia/Ho_Chi_Minh');	
-	$spw = $_GET['spw'];
-	$drw = $_GET['drw'];
-	$pm10 = $_GET['pm10'];
+	$temp = $_GET['temp'];
+	$humi = $_GET['humi'];
+	$light = $_GET['light'];
+	$noise = $_GET['noise'];
+	$pa = $_GET['pa'];
 	$pm25 = $_GET['pm25'];
 	$so2 = $_GET['so2'];
 	$no2 = $_GET['no2'];
 	$co = $_GET['co'];
 	$time=date('Y-m-d H:i:s');
-	$sql = "INSERT INTO data1 VALUES (NULL,'$spw','$drw','$pm10','$pm25','$so2','$no2','$co','$time')";
+	$sql = "INSERT INTO data1 VALUES (NULL,'$temp','$humi','$light','$noise','$pa','$pm25','$so2','$no2','$co','$time')";
 	$result = mysqli_query($link, $sql) or die ("no connect: $sql ".mysqli_error($link));
 	$query = "SELECT * FROM setting ORDER BY id DESC LIMIT 1";
 	$result = mysqli_query($link,$query) or die (mysqli_error($link));
@@ -22,7 +24,7 @@
 	{
 		while ($row = mysqli_fetch_array($result))
 		{
-			echo "*".$row['timer'].";".$row['maxPPM25'].";".$row['minPPM25'].";".$row['maxPPM10'].";".$row['minPPM10'].";".$row['maxSO2'].";".$row['minSO2'].";".$row['maxNO2'].";".$row['minNO2'].";".$row['maxCO'].";".$row['minCO']."#";
+			echo "*".$row['timer'].";".$row['maxPPM25'].";".$row['minPPM25'].";".$row['maxSO2'].";".$row['minSO2'].";".$row['maxNO2'].";".$row['minNO2'].";".$row['maxCO'].";".$row['minCO']."#";
 		}
 	}
 

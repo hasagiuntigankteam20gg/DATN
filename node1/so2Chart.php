@@ -30,7 +30,7 @@
                 let series = SO2Chart.series[0];
                 let x = (new Date()).getTime();
                 SO2Chart.series[0].addPoint([x,point[1]], true, true);
-				ppm10Chart.series[0].addPoint([x,point[3]], true, true);  
+				NO2Chart.series[0].addPoint([x,point[3]], true, true);  
 				ppm25Chart.series[0].addPoint([x,point[2]], true, true);  
 				COChart.series[0].addPoint([x,point[4]], true, true);
             },

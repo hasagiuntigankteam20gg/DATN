@@ -23,18 +23,18 @@
 	}
 	});
 	var COChart;
-	function requestData() {
-        $.ajax({
-            url: 'getco.php',
-            success: function(point) {
-                var series = COChart.series[0];
-                var x = (new Date()).getTime();
-                COChart.series[0].addPoint([x,point[1]], true, true);
-                setTimeout(requestData, 2000);    
-            },
-            cache: false
-        });
-    }
+	// function requestData() {
+    //     $.ajax({
+    //         url: 'getco.php',
+    //         success: function(point) {
+    //             var series = COChart.series[0];
+    //             var x = (new Date()).getTime();
+    //             COChart.series[0].addPoint([x,point[1]], true, true);
+    //             setTimeout(requestData, 2000);    
+    //         },
+    //         cache: false
+    //     });
+    // }
 	COChart = Highcharts.stockChart('co_chart', {
 	    chart: {
 	        events: {

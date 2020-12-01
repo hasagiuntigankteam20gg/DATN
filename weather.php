@@ -38,6 +38,14 @@
                         <div>Max Temperature: <?php echo $current_obj->main->temp_max." &#8451;" ?></div>
                         <div>Min Temperature: <?php echo $current_obj->main->temp_min." &#8451;" ?></div>                                             
                     </div>
+                    <div class="row">
+                        <div class="col-md-5">Wind Speed: <?php echo $current_obj->wind->speed." meter/sec" ?></div>
+                        <div class="col-md-5">Wind Direction: <?php echo $current_obj->wind->deg."&deg;" ?></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-5">Sunrise: <?php echo date("H:i:s",$current_obj->sys->sunrise); ?></div>
+                        <div class="col-md-5">Sunset: <?php echo date("H:i:s",$current_obj->sys->sunset); ?></div>
+                    </div>
                 </div>
             </div>
         </div>    

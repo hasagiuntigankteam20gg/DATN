@@ -65,22 +65,20 @@
 			//    var ratioA = document.getElementById('ratioA').value;
 			
 			var timer = document.getElementById('timer').value;
-			console.log(timer)
+			
 			var maxPPM25 = document.getElementById('maxPPM25').value;
 			var minPPM25 = document.getElementById('minPPM25').value;
-			console.log(minPPM25)
-			var maxPPM10 = document.getElementById('maxPPM10').value;
-			var minPPM10 = document.getElementById('minPPM10').value;
+			
+			
 			var maxSO2 = document.getElementById('maxSO2').value;
 			var minSO2 = document.getElementById('minSO2').value;
 			var maxNO2 = document.getElementById('maxNO2').value;
 			var minNO2 = document.getElementById('minNO2').value;
 			var maxCO = document.getElementById('maxCO').value;
 			var minCO = document.getElementById('minCO').value;
-			console.log(timer, maxPPM25, minPPM25, maxPPM10 )
+			
 			var queryString = "setRequest.php?timer=" + timer + "&maxPPM25=" + maxPPM25 
-			+ "&minPPM25=" + minPPM25 + "&maxPPM10=" + maxPPM10 + "&minPPM10=" + minPPM10 
-			+ "&maxSO2=" + maxSO2 + "&minSO2=" + minSO2 + "&maxNO2=" + maxNO2 + "&minNO2=" 
+			+ "&minPPM25=" + minPPM25 + "&maxSO2=" + maxSO2 + "&minSO2=" + minSO2 + "&maxNO2=" + maxNO2 + "&minNO2=" 
 			+ minNO2 + "&maxCO=" + maxCO + "&minCO=" + minCO; 
 			// ECHO DOC DATA TỪ WEB XUỐNG-> LOAD FILE setrequest.php
 			console.log(queryString);
@@ -91,8 +89,8 @@
 	<img src="Logo_BKDN.png" width="500" height="500" id="logoHeaderBKDN" />
 	<img src="Logo_DTVT.png" width="500" height="500" id="logoHeaderDTVT" />
 	<div id="top">
-		<center>HỆ THỐNG QUAN TRẮC THỜI TIẾT VÀ KHÔNG KHÍ</center>
-		<center>WEATHER AND AIR MONITORING SYSTEM</center>
+		<center>HỆ THỐNG QUAN TRẮC CHẤT LƯỢNG KHÔNG KHÍ</center>
+		<center>QUALITY AIR MONITORING SYSTEM</center>
 	</div>
 	<div class="header">
 		<a href="../" class="btn btn-info" role="button"> HOME</a>
@@ -114,8 +112,8 @@
 				<?php include "./ppm25Chart.php"; ?>
 			</div>
 			<div class="col-md-6">
-				<div id="ppm10_chart" style="width: 500px; height: 400px; margin-right:50px"></div>
-					<?php include "./ppm10Chart.php"; ?>
+				<div id="no2_chart" style="width: 500px; height: 400px; margin-right:50px"></div>
+					<?php include "./no2Chart.php"; ?>
 			</div>
 		</div>
 	</div>
@@ -136,8 +134,8 @@
 			<table align='center' border=1 cellspacing=2 cellpadding='4' style="width: 80%;">
 				<tr id="trForm">
 					<td>
-						Danger PPM2.5 : <input type='number' step='any' name='maxPPM25' id='maxPPM25'><br>
-						Warning PPM2.5: <input type='number' step='any' name='minPPM25' id='minPPM25'>
+						Danger PM2.5 : <input type='number' step='any' name='maxPPM25' id='maxPPM25'><br>
+						Warning PM2.5: <input type='number' step='any' name='minPPM25' id='minPPM25'>
 					</td>
 					<td>
 						Danger SO<sub>2</sub> : <input type='number' step='any' name='maxSO2' id='maxSO2'><br>
@@ -150,16 +148,16 @@
 				</tr>
 
 				<tr id="trForm">
-					<td>
-						Danger PPM10 : <input type='number' step='any' name='maxPPM10' id='maxPPM10'><br>
-						Warning PPM10: <input type='number' step='any' name='minPPM10' id='minPPM10'>
-					</td>
+					
 					<td>
 						Danger NO<sub>2</sub> : <input type='number' step='any' name='maxNO2' id='maxNO2'><br>
 						Warning NO<sub>2</sub>: <input type='number' step='any' name='minNO2' id='minNO2'>
 					</td>
 					<td>
 						Update Time: <input type="text" name="timer" id="timer"> minutes&nbsp;&nbsp;&nbsp;
+					</td>
+					<td>
+						
 					</td>
 				</tr>
 				<tr id="trForm">

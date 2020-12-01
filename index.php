@@ -15,8 +15,8 @@
     <img src="Logo_BKDN.png" width="500" height="500" id="logoHeaderBKDN"/>
     <img src="Logo_DTVT.png" width="500" height="500" id="logoHeaderDTVT"/>
         <div id="top">  
-            <center>HỆ THỐNG QUAN TRẮC THỜI TIẾT VÀ KHÔNG KHÍ </center>
-			<center> WEATHER AND AIR MONITORING SYSTEM</center>  
+            <center>HỆ THỐNG QUAN TRẮC CHẤT LƯỢNG KHÔNG KHÍ </center>
+			<center> QUALITY AIR MONITORING SYSTEM</center>  
         </div>    
 		<div class="header">		                            
             <a href="#" class="btn btn-info" role="button"> HOME</a>
@@ -24,15 +24,9 @@
             <a href=".." class="btn btn-info" role="button"> TRẠM 2</a>   
 		</div>
 		<div id="wrapper">
-            <div id="left">
+            
 			<?php include 'weather.php';?>
-			</div>
-			
-			<div id="wrap_main">
-					
-			</div>			
-		
-			
+	
         </div> 
         <!-- <script src="ajaxDiv.js"></script> -->
 		<div id="map"></div>

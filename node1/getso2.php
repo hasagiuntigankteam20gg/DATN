@@ -15,7 +15,7 @@ $y = rand(0, 100);*/
 		if ($row['id'] != -1) {
 			$y= (double)$row['so2'];
 			$z = (double)$row['pm25'];
-			$a = (double)$row['pm10'];
+			$a = (double)$row['no2'];
 			$b = (double)$row['co'];
 		}
 	}

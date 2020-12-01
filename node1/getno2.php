@@ -13,7 +13,7 @@ $y = rand(0, 100);*/
 	$result = mysqli_query($link,$query) or die (mysqli_error($link));
 	while ($row = mysqli_fetch_array($result)){	
 		if ($row['id'] != -1) {
-		    $y= (double)$row['pm10'];
+		    $y= (double)$row['no2'];
 		}
 	}
     // Create a PHP array and echo it as JSON
