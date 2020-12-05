@@ -23,53 +23,26 @@
 	}
 	});
 
-	function requestData() {
-        $.ajax({
-            url: 'getso2.php',
-            success: function(point) {
-                let series = SO2Chart.series[0];
-                let x = (new Date()).getTime();
-                SO2Chart.series[0].addPoint([x,point[1]], true, true);
-				NO2Chart.series[0].addPoint([x,point[3]], true, true);  
-				ppm25Chart.series[0].addPoint([x,point[2]], true, true);  
-				COChart.series[0].addPoint([x,point[4]], true, true);
-            },
-            cache: false
-        });
-		// $.ajax({
-        //     url: 'getppm10.php',
-        //     success: function(point) {
-        //         let series = ppm10Chart.series[0];
-        //         let x = (new Date()).getTime();
-        //         ppm10Chart.series[0].addPoint([x,point[1]], true, true);
-        //     },
-        //     cache: false
-        // });
-		// $.ajax({
-        //     url: 'get.php',
-        //     success: function(point) {
-        //         let series = ppm25Chart.series[0];
-        //         let x = (new Date()).getTime();
-        //         ppm25Chart.series[0].addPoint([x,point[1]], true, true);
-        //     },
-        //     cache: false
-        // });
-		// $.ajax({
-        //     url: 'getco.php',
-        //     success: function(point) {
-        //         var series = COChart.series[0];
-        //         var x = (new Date()).getTime();
-        //         COChart.series[0].addPoint([x,point[1]], true, true);
-        //     },
-        //     cache: false
-        // });
-		setInterval(requestData, 5000);
+	// setInterval(function requestData() {
+    //     $.ajax({
+    //         url: 'getso2.php',
+    //         success: function(point) {
+    //             let series = SO2Chart.series[0];
+    //             let x = (new Date()).getTime();
+    //             SO2Chart.series[0].addPoint([x,point[1]], true, true);
+	// 			NO2Chart.series[0].addPoint([x,point[3]], true, true);  
+	// 			ppm25Chart.series[0].addPoint([x,point[2]], true, true);  
+	// 			COChart.series[0].addPoint([x,point[4]], true, true);
+    //         },
+    //         cache: false
+    //     }), 5000);
+
+		// setInterval(requestData, 5000);
 
     }
 	const SO2Chart = Highcharts.stockChart('so2_chart', {
 	    chart: {
 	        events: {
-	            load: requestData
 	        }
 	    },
 	    rangeSelector: {
